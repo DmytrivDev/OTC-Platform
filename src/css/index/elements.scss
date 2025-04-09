@@ -2,13 +2,10 @@
   padding-top: 10rem;
 }
 
-.stlgrad {
+.stlcol {
   & > span {
     span {
-      background: linear-gradient(90deg, #c440c9 36.67%, #5298e0 117.05%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--cv2);
     }
   }
 }
@@ -114,15 +111,13 @@
   }
 }
 
-.brgrad {
-  background:
-    linear-gradient(var(--cb), var(--cb)) padding-box,
-    linear-gradient(180deg, var(--ct) 0%, var(--cb2) 100%) border-box !important;
-  border: 0.0625rem solid transparent !important;
-  &.grad-rever {
-    background:
-      linear-gradient(var(--cb), var(--cb)) padding-box,
-      linear-gradient(0, var(--ct) 0%, var(--cb2) 100%) border-box !important;
+.fltrdec {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.32;
+  filter: blur(12.5rem);
+  img {
+    width: 100%;
   }
 }
 
