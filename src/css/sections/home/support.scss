@@ -1,6 +1,5 @@
 .banner {
   position: relative;
-  margin-top: 2.6875rem;
   &::after,
   &::before {
     content: "";
@@ -65,6 +64,13 @@
   }
 }
 
+.support__heading {
+  margin-bottom: 2.5rem;
+  .tl2 {
+    text-align: center;
+  }
+}
+
 @keyframes animateF {
   0% {
     transform: translateX(calc(100% + var(--moveP)));
@@ -110,9 +116,12 @@
   .banner__list {
     gap: 1rem;
   }
-
   .banner__box {
     max-width: 6.2728rem;
     height: 4rem;
+  }
+
+  .support__heading {
+    margin-bottom: 1.5rem;
   }
 }
