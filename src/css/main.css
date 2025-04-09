@@ -18,6 +18,7 @@
 @import url('./sections/home/hero.scss');
 @import url('./sections/home/advant.scss');
 @import url('./sections/home/support.scss');
+@import url('./sections/home/work.scss');
 @import url('./sections/home/panel.scss');
 @import url('./sections/home/request.scss');
 @import url('./sections/home/success.scss');
