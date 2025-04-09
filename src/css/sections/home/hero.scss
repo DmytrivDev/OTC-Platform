@@ -100,12 +100,13 @@
   }
 }
 .hero__wav {
-  position: absolute;
   z-index: 1;
-  top: 0;
+  position: absolute;
+  bottom: 5.625rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 89.9375rem;
+  width: 100%;
+  min-width: 90rem;
   img {
     width: 100%;
   }
@@ -175,6 +176,7 @@
     }
   }
   .hero__wav {
+    bottom: -7.5rem;
     left: 0;
     transform: translateX(0);
     &::before {
