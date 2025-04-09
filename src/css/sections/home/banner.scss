@@ -1,8 +1,26 @@
 .banner {
-  padding: 4rem 0;
+  position: relative;
+  margin-top: 2.6875rem;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    height: 100%;
+    width: 26.9375rem;
+    opacity: 0.96;
+  }
+  &::after {
+    right: 0;
+    background: linear-gradient(90deg, rgba(13, 13, 13, 0) 0%, #0d0d0d 100%);
+  }
+  &::before {
+    left: 0;
+    background: linear-gradient(270deg, rgba(13, 13, 13, 0) 0%, #0d0d0d 100%);
+  }
 }
 .banner__carousell {
-  padding: 1rem 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -35,6 +53,17 @@
 .banner__item {
   flex-shrink: 0;
 }
+.banner__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 8.625rem;
+  height: 5.5rem;
+  img {
+    max-height: 100%;
+  }
+}
 
 @keyframes animateF {
   0% {
@@ -63,6 +92,13 @@
 }
 
 @media screen and (max-width: 960px) {
+  .banner {
+    margin-top: 1.8125rem;
+    &::after,
+    &::before {
+      width: 6rem;
+    }
+  }
   .banner__carousell {
     &:hover {
       .banner__list {
@@ -73,5 +109,10 @@
   }
   .banner__list {
     gap: 1rem;
+  }
+
+  .banner__box {
+    max-width: 6.2728rem;
+    height: 4rem;
   }
 }

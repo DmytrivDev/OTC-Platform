@@ -4,6 +4,8 @@ import IMask from 'imask';
 import isEmail from 'validator/lib/isEmail';
 import isEmpty from 'validator/lib/isEmpty';
 
+import { openModal } from './modal.js';
+
 const forms = document.querySelectorAll('.submitForm');
 
 forms?.forEach(form => {
@@ -71,7 +73,10 @@ function submitForm(e) {
   });
 
   if (!errors) {
-    setTimeout(() => e.target.reset(), 300);
+    setTimeout(() => {
+      openModal('idSuccess');
+      e.target.reset();
+    }, 300);
 
     // sendForm(e.target);
   }

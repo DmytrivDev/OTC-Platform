@@ -2,8 +2,8 @@ html,
 body {
   font-optical-sizing: auto;
   font-family: var(--ff);
-  background-color: var(--cw);
-  color: var(--cm);
+  background-color: var(--cb);
+  color: var(--cw);
   font-size: 16px;
   line-height: 1.5;
 }
@@ -23,21 +23,21 @@ body {
 main,
 .main {
   flex: 1 1 auto;
-  padding-bottom: 4rem;
+  padding-bottom: 10rem;
 }
 
 [class*="__container"] {
-  max-width: 85rem;
+  max-width: 86.25rem;
   padding: 0 1.875rem;
   margin: 0 auto;
 }
 
-/* --------- Adaptive desktop (1440px) --------- */
+/* --------- Adaptive desktop (1380px) --------- */
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1380px) {
   html,
   body {
-    font-size: 1.1111vw;
+    font-size: 1.15942vw;
   }
 }
 
@@ -47,6 +47,11 @@ main,
   html,
   body {
     font-size: 16px;
+  }
+
+  main,
+  .main {
+    padding-bottom: 6rem;
   }
 
   [class*="__container"] {
@@ -60,17 +65,5 @@ main,
   html,
   body {
     font-size: 4.26vw;
-  }
-
-  [class*="__container"] {
-    padding: 0 0.625rem;
-  }
-}
-
-/* --------- Adaptive mobile (320px) --------- */
-@media screen and (max-width: 320px) {
-  html,
-  body {
-    font-size: 5vw;
   }
 }

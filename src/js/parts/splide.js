@@ -1,55 +1,36 @@
 import { initSlider } from './splidecust';
 
-// const elemSplide = document.querySelector('.elem');
-// if (elemSplide) {
-//   initSlider(elemSplide, {
-//     perPage: 2,
-//     breakpoints: {
-//       960: {},
-//       768: {},
-//     },
-//   });
-// }
+let advantSliderInstance;
+const advant = document.querySelector('.advant');
 
-// const elemSplides = document.querySelectorAll('.elem');
-// elemSplides?.forEach(container => {
-//   initSlider(container, {
-//     perPage: 2,
-//     breakpoints: {
-//       960: {},
-//       768: {},
-//     },
-//   });
-// });
+const advantInitSlider = () => {
+  if (advant && !advantSliderInstance) {
+    advantSliderInstance = initSlider(advant, {
+      perPage: 2,
+      gap: '1rem',
+      pagination: true,
+      breakpoints: {
+        768: {
+          perPage: 1,
+        },
+      },
+    });
+  }
+};
 
-// let elemSliderInstance;
-// const elem = document.querySelector('.elem');
+const destroySliders = () => {
+  if (advantSliderInstance) {
+    advantSliderInstance.destroy();
+    advantSliderInstance = null;
+  }
+};
 
-// const elemInitSlider = () => {
-//   if (elem && !elemSliderInstance) {
-//     elemSliderInstance = initSlider(elem, {
-//       perPage: 2,
-//       breakpoints: {
-//         960: {},
-//         768: {},
-//       },
-//     });
-//   }
-// };
+const checkViewport = () => {
+  advantInitSlider();
+  if (window.innerWidth > 960) {
+    destroySliders();
+  }
+};
 
-// const destroySliders = () => {
-//   if (elemSliderInstance) {
-//     elemSliderInstance.destroy();
-//     elemSliderInstance = null;
-//   }
-// };
-
-// const checkViewport = () => {
-//   initElemSlider();
-//   if (window.innerWidth > 960) {
-//     destroySliders();
-//   }
-// };
-
-// window.addEventListener('resize', checkViewport);
-// document.addEventListener('DOMContentLoaded', checkViewport);
+window.addEventListener('resize', checkViewport);
+document.addEventListener('DOMContentLoaded', checkViewport);

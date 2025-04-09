@@ -95,38 +95,3 @@ export const initSlider = (container, options = {}) => {
 
   return splide;
 };
-
-// <section class="elem">
-//   <div class="splide">
-//     <div class="splide__track">
-//       <ul class="splide__list">
-//         <li class="splide__slide">
-//           <span class="current__slide">01</span>
-//           <span class="total__slide">01/02</span>
-//           <p>slide 1</p>
-//         </li>
-//         <li class="splide__slide">
-//           <span class="current__slide">02</span>
-//           <span class="total__slide">02/02</span>
-//           <p>slide 2</p>
-//         </li>
-//       </ul>
-//     </div>
-//   </div>
-
-//   <div class="arrows">
-//     <div class="arrows__body">
-//       <button type="button" class="arrows__prev" aria-label="Arrows prev">
-//         <span>Назад</span>
-//       </button>
-//       <span class="arrows__number">01/02</span>
-//       <button type="button" class="arrows__next" aria-label="Arrows next">
-//         <span>Далі</span>
-//       </button>
-//     </div>
-//   </div>
-
-//   <div class="progressbar">
-//     <div class="progressbar__thumb" aria-label="Progressbar line"></div>
-//   </div>
-// </section>
