@@ -3,10 +3,8 @@
 }
 
 .stlcol {
-  & > span {
-    span {
-      color: var(--cv2);
-    }
+  span {
+    color: var(--cv2);
   }
 }
 
