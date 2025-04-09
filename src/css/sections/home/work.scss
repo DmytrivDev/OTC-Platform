@@ -1,8 +1,22 @@
+.work__body {
+  position: relative;
+  .fltrdec {
+    top: 7.3125rem;
+    right: -32.8125rem;
+    width: 84.1496rem;
+    opacity: 0.04;
+    filter: blur(8rem);
+  }
+}
 .work__heading {
+  position: relative;
+  z-index: 2;
   margin-bottom: 2.5rem;
 }
 
 .tabl {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 26.5rem 1fr;
 }
@@ -96,6 +110,12 @@
 @media screen and (max-width: 960px) {
   .work__container {
     padding-right: 0;
+  }
+  .work__body {
+    position: relative;
+    .fltrdec {
+      display: none;
+    }
   }
   .work__heading {
     margin-bottom: 1.5rem;
