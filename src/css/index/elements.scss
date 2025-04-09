@@ -1,0 +1,22 @@
+.btn-def {
+	flex-shrink: 0;
+	width: fit-content;
+	display: block;
+	text-align: center;
+	background-color: var(--cm);
+	color: var(--cw);
+	padding: 0.625rem 0.75rem;
+	transition: all 0.15s ease-in;
+	&:hover {
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.class {
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.class {
+	}
+}

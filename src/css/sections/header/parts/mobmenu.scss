@@ -1,0 +1,42 @@
+.mobmenu {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .mobmenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100 - 100%);
+    background-color: var(--cw);
+    transform: translateY(-100%);
+
+    transition: all 0.35s ease-in;
+    -webkit-transition: all 0.35s ease-in;
+    -o-transition: all 0.35s ease-in;
+    -webkit-overflow-scrolling: touch;
+
+    &.isOpened {
+      transform: translateY(0);
+      top: 100%;
+    }
+  }
+
+  .mobmenu__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .mobmenu__container {
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}

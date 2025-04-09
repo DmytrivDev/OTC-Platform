@@ -1,0 +1,76 @@
+html,
+body {
+  font-optical-sizing: auto;
+  font-family: var(--ff);
+  background-color: var(--cw);
+  color: var(--cm);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.overhide {
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+
+main,
+.main {
+  flex: 1 1 auto;
+  padding-bottom: 4rem;
+}
+
+[class*="__container"] {
+  max-width: 85rem;
+  padding: 0 1.875rem;
+  margin: 0 auto;
+}
+
+/* --------- Adaptive desktop (1440px) --------- */
+
+@media screen and (max-width: 1440px) {
+  html,
+  body {
+    font-size: 1.1111vw;
+  }
+}
+
+/* --------- Adaptive tablet (960px) --------- */
+
+@media screen and (max-width: 960px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  [class*="__container"] {
+    padding: 0 1rem;
+  }
+}
+
+/* --------- Adaptive mobile (375px) --------- */
+
+@media screen and (max-width: 375px) {
+  html,
+  body {
+    font-size: 4.26vw;
+  }
+
+  [class*="__container"] {
+    padding: 0 0.625rem;
+  }
+}
+
+/* --------- Adaptive mobile (320px) --------- */
+@media screen and (max-width: 320px) {
+  html,
+  body {
+    font-size: 5vw;
+  }
+}

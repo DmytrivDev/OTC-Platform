@@ -1,0 +1,25 @@
+.header__body {
+  .actions {
+  }
+  .actions__lang {
+  }
+  .actions__soc {
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header__body {
+    .actions {
+      display: none;
+    }
+  }
+
+  .mobmenu {
+    .actions {
+    }
+    .actions__lang {
+    }
+    .actions__soc {
+    }
+  }
+}

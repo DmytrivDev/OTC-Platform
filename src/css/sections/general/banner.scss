@@ -1,0 +1,77 @@
+.banner {
+  padding: 4rem 0;
+}
+.banner__carousell {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &:hover {
+    .banner__list {
+      animation-play-state: paused !important;
+      -webkit-animation-play-state: paused !important;
+    }
+  }
+}
+.banner__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 2rem;
+  min-width: 100%;
+  will-change: transform;
+
+  &.carseFirst {
+    animation: animateF 30s -30s linear infinite;
+    -webkit-animation: animateF 30s -30s linear infinite;
+  }
+  &.carseSecond {
+    animation: animateS 30s -15s linear infinite;
+    -webkit-animation: animateS 30s -15s linear infinite;
+  }
+}
+.banner__item {
+  flex-shrink: 0;
+}
+
+@keyframes animateF {
+  0% {
+    transform: translateX(calc(100% + var(--moveP)));
+    -webkit-transform: translateX(calc(100% + var(--moveP)));
+    -ms-transform: translateX(calc(100% + var(--moveP)));
+  }
+  100% {
+    transform: translateX(calc(-100% + var(--moveM) - var(--gap)));
+    -webkit-transform: translateX(calc(-100% + var(--moveM) - var(--gap)));
+    -ms-transform: translateX(calc(-100% + var(--moveM) - var(--gap)));
+  }
+}
+
+@keyframes animateS {
+  0% {
+    transform: translateX(var(--moveP));
+    -webkit-transform: translateX(var(--moveP));
+    -ms-transform: translateX(var(--moveP));
+  }
+  100% {
+    transform: translateX(calc(-200% + var(--moveM) - var(--gap)));
+    -webkit-transform: translateX(calc(-200% + var(--moveM) - var(--gap)));
+    -ms-transform: translateX(calc(-200% + var(--moveM) - var(--gap)));
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .banner__carousell {
+    &:hover {
+      .banner__list {
+        animation-play-state: running !important;
+        -webkit-animation-play-state: running !important;
+      }
+    }
+  }
+  .banner__list {
+    gap: 1rem;
+  }
+}
