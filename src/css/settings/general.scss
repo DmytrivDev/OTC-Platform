@@ -23,7 +23,6 @@ body {
 main,
 .main {
   flex: 1 1 auto;
-  padding-bottom: 10rem;
 }
 
 [class*="__container"] {
@@ -47,11 +46,6 @@ main,
   html,
   body {
     font-size: 16px;
-  }
-
-  main,
-  .main {
-    padding-bottom: 6rem;
   }
 
   [class*="__container"] {
