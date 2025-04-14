@@ -6,6 +6,7 @@ import './parts/navlang.js';
 import './parts/scrollto.js';
 import './parts/splidecust.js';
 import './parts/splide.js';
+import './parts/ultimate.js';
 import './parts/banner.js';
 import './parts/tabl.js';
 import './parts/forms.js';

@@ -2,6 +2,10 @@
   position: sticky;
   top: 0;
   z-index: 1100;
+  transition: all 0.3s ease-in;
+  &.isHidd {
+    transform: translateY(-100%);
+  }
 }
 .header__main {
   position: relative;
