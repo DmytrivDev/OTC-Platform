@@ -18,11 +18,9 @@ ultCont?.forEach(el => {
     updateOnMove: true,
     breakpoints: {
       960: {
+        perPage: 2,
         gap: '4rem',
-        height: '50rem',
-      },
-      500: {
-        height: '44.375rem',
+        height: '100%',
       },
     },
   };
@@ -42,7 +40,9 @@ ultCont?.forEach(el => {
       // Перевірка видимості секції в межах екрану
       header.classList.remove('isHidd');
       if (sectionRect.top <= 0 && sectionRect.bottom >= viewportHeight) {
-        header.classList.add('isHidd');
+        if (window.innerWidth > 960) {
+          header.classList.add('isHidd');
+        }
         const scrollableHeight = sectionRect.height - viewportHeight;
         const scrolledInSection = Math.abs(sectionRect.top);
         const scrollPercent = (scrolledInSection / scrollableHeight) * 100;
