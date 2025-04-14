@@ -22,7 +22,7 @@ ultCont?.forEach(el => {
         height: '50rem',
       },
       500: {
-        height: '43.75rem',
+        height: '44.375rem',
       },
     },
   };
