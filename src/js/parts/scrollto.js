@@ -1,6 +1,6 @@
 import scrollToElement from 'scroll-to-element';
 
-const anchorLinks = document.querySelectorAll('.anchor-links li > a');
+const anchorLinks = document.querySelectorAll('.anchor-links li > a, a.anchor');
 
 anchorLinks?.forEach(link => {
   link.addEventListener('click', event => {

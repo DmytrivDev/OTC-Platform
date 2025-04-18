@@ -1,4 +1,4 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 import IMask from 'imask';
 import isEmail from 'validator/lib/isEmail';
@@ -12,32 +12,30 @@ forms?.forEach(form => {
   form.addEventListener('submit', submitForm);
 });
 
-// async function sendForm(form) {
-//   const ajaxurl = '/wp-admin/admin-ajax.php';
-//   const headers = { 'Content-Type': 'multipart/form-data' };
-//   const myFormData = new FormData(form);
-//   const params = Object.fromEntries(myFormData.entries());
+async function sendForm(form) {
+  const ajaxurl = '/wp-admin/admin-ajax.php';
+  const myFormData = new FormData(form);
+  myFormData.append('action', 'sendForm');
 
-//   try {
-//     const responce = await axios.get(ajaxurl, { params }, { headers });
-//     console.log(responce.data);
-//     if (responce.data !== 'error') {
-//       formEnd(form, true);
-//     } else {
-//       formEnd(form, false);
-//     }
-//   } catch (error) {
-//     formEnd(form, false);
-//   }
-// }
+  try {
+    const response = await axios.post(ajaxurl, myFormData);
+    console.log(response.data);
+    if (response.data.data !== 'error') {
+      formEnd(form, true);
+    } else {
+      formEnd(form, false);
+    }
+  } catch (error) {
+    console.log(error);
+    formEnd(form, false);
+  }
+}
 
 function formEnd(form, status) {
   if (status) {
-    const successUrl = form.data.success;
-
-    window.location.href = successUrl;
+    openModal('idSuccess');
   } else {
-    alert('Форма не відправлена. Спробуйте ще раз');
+    openModal('idError');
   }
 }
 
@@ -74,11 +72,10 @@ function submitForm(e) {
 
   if (!errors) {
     setTimeout(() => {
-      openModal('idSuccess');
       e.target.reset();
-    }, 300);
+    }, 500);
 
-    // sendForm(e.target);
+    sendForm(e.target);
   }
 }
 

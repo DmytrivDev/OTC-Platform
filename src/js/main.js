@@ -9,6 +9,9 @@ import './parts/splide.js';
 import './parts/ultimate.js';
 import './parts/banner.js';
 import './parts/tabl.js';
+import './parts/accord.js';
+import './parts/accordion.js';
+import './parts/tabs.js';
 import './parts/forms.js';
 import './parts/modal.js';
 

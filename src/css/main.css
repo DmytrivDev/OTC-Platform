@@ -1,5 +1,5 @@
 /* Settings */
-@import url('./settings/fonts.scss');
+/* @import url('./settings/fonts.scss'); */
 @import url('./index/variables.scss');
 @import url('./index/icons.scss');
 @import url('./settings/default.scss');
