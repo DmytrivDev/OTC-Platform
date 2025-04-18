@@ -153,6 +153,9 @@
 }
 
 @media screen and (max-width: 960px) {
+  .solution {
+    height: auto !important;
+  }
   .solution__heading {
     margin-bottom: 0.75rem;
     .tl2,
@@ -161,7 +164,10 @@
     }
   }
   .solution__wrapp {
-    top: 1.25rem;
+    position: relative;
+    justify-content: stretch;
+    min-height: auto;
+    top: auto;
     padding: 0;
     & > .fltrdec {
       display: none;
@@ -171,12 +177,19 @@
     .frame {
       max-width: 100%;
     }
+
+    .splide__slide {
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
   }
   .solution__part {
     flex-direction: column-reverse;
     align-items: stretch;
     justify-content: stretch;
     gap: 1.5rem 0;
+    opacity: 1;
     &.isReverse {
       flex-direction: column-reverse;
     }
